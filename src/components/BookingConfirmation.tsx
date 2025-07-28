@@ -29,6 +29,11 @@ export const BookingConfirmation: React.FC<BookingConfirmationProps> = ({
       return serviceDetails.finalTotal;
     }
 
+    // For half-day rentals from HalfDayConfirmation
+    if (service === 'half-day' && serviceDetails?.totalAmount) {
+      return serviceDetails.totalAmount;
+    }
+
     // For calculator services
     if (service === 'regular' || service === 'target-range') {
       return serviceDetails?.total || 2100;
