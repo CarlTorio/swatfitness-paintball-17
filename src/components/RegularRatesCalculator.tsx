@@ -37,6 +37,7 @@ export const RegularRatesCalculator: React.FC<RegularRatesCalculatorProps> = ({
 
   const handleContinue = () => {
     onContinue({ persons, total });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
