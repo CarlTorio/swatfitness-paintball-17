@@ -180,6 +180,7 @@ export const PatientForm: React.FC<PatientFormProps> = ({ onSubmit, onBack, init
   const handleFormSubmit = (data: BookingFormData) => {
     // Navigate directly to confirmation tab
     onSubmit({ ...data, receiptFile: receiptFile || undefined });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
