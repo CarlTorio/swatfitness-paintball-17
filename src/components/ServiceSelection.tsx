@@ -44,6 +44,7 @@ export const ServiceSelection: React.FC<ServiceSelectionProps> = ({
     navigate('/package-confirmation', { 
       state: { packageDetails: selectedPackage } 
     });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleHalfDaySelect = (schedule: string) => {
