@@ -166,6 +166,7 @@ export const AppointmentCalendar: React.FC<AppointmentCalendarProps> = ({
     if (selected && selectedTimeSlot) {
       const dateStr = format(selected, 'yyyy-MM-dd');
       onDateTimeSelect(dateStr, selectedTimeSlot);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
