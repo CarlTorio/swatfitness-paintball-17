@@ -178,7 +178,11 @@ const PackageConfirmation = () => {
                 state: { 
                   step: 2,
                   service: 'group',
-                  serviceDetails: packageDetails,
+                  serviceDetails: {
+                    ...packageDetails,
+                    finalTotal: finalTotal,
+                    calculatedPrice: `₱${finalTotal.toLocaleString()}`
+                  },
                   groupSize: packageDetails.groupSize
                 } 
               })}

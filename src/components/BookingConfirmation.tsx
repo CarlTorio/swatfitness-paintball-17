@@ -25,8 +25,8 @@ export const BookingConfirmation: React.FC<BookingConfirmationProps> = ({
     if (!service) return 2100; // Default amount
 
     // For group packages from PackageConfirmation
-    if (service === 'group' && serviceDetails?.price) {
-      return parseInt(serviceDetails.price.replace('₱', '').replace(',', ''));
+    if (service === 'group' && serviceDetails?.finalTotal) {
+      return serviceDetails.finalTotal;
     }
 
     // For calculator services
